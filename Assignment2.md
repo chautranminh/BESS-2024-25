@@ -5,3 +5,6 @@
 my little pony. write the code in the history (latest one)
 ```
 3. Dissolve the solar exclusion in Segovia
+```
+```
+==> manually made permanent with the name: `solar_panel_segovia_dissolve.gpkg`
