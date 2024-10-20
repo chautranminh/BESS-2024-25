@@ -7,7 +7,9 @@
 * and files from Assignment1.md including "region_of_critical_species" layer, "topillo_distribution" CSV file.
 * Insert layers from Wikiloc app which records the tracks of the field trip and the observations. Layer names: "observation_field1" and "Campo de San Pedro - Aldeanueva del Campanario — tracks". Layers type: Vector file
 ## Import CSV data to vector layer - topillo_distribution 
-
+* Add the CSV file by going to Layer --> Add Layer --> Add delimited text layer
+* File format: Custom delimiters: Tab
+* Configure the coordinate. X field = decimalLongtitude. Y field = decimalLatitude
 
 ## Cropping every information layer to extent of Segovia
 
