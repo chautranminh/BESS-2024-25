@@ -5,6 +5,8 @@
 * [municipalities in Castilla y Leon](https://idecyl.jcyl.es/geonetwork/srv/eng/catalog.search#/metadata/SPAGOBCYLCITDTSAULPR): Layer name in QGIS: "castilla_y_leon" . Layer type: Shape file
 * [irrigable area](https://idecyl.jcyl.es/geonetwork/srv/eng/catalog.search#/metadata/SPAGOBCYLAYGDTSLCRZR). Layer name in QGIS: "irrigable zones". Layer type: Shape file
 * and files from Assignment1.md including "region_of_critical_species" layer, "topillo_distribution" CSV file.
+* [river course](https://idecyl.jcyl.es/geonetwork/srv/eng/catalog.search#/metadata/SPAGOBCYLCITDTSHYCAL)
+* [livestock routes](https://idecyl.jcyl.es/geonetwork/srv/eng/catalog.search#/metadata/SPAGOBCYLMNADTSAMVPE)
 * Insert layers from Wikiloc app which records the tracks of the field trip and the observations. Layer names: "observation_field1" and "Campo de San Pedro - Aldeanueva del Campanario — tracks". Layers type: Vector file
 ## Import CSV data to vector layer - topillo_distribution 
 * Add the CSV file by going to Layer --> Add Layer --> Add delimited text layer
@@ -35,3 +37,19 @@ This is a raster layer which is imported into QGIS by adding URL in WMS. But cli
   ```
   processing.run("native:clip", {'INPUT':'delimitedtext://file:///C:/Users/nguye/OneDrive%20-%20IE%20University/Escritorio/IE/2ndYear/GIS/challenge_topillo/vole_distribution/0033613-240906103802322.csv?type=csv&delimiter=%5Ct&maxFields=10000&detectTypes=yes&xField=decimalLongitude&yField=decimalLatitude&crs=EPSG:4326&spatialIndex=no&subsetIndex=no&watchFile=no&field=gbifID:text','OVERLAY':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/segovia_outline.shp','OUTPUT':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/topillo_distribution_sg.shp'})
   ```
+* Layer 5: livestocks_routes
+  ```
+   processing.run("native:clip", {'INPUT':'C:\\Users\\nguye\\Downloads\\znie_cyl_vvpp_ejes.gpkg|layername=znie_cyl_vvpp_ejes','OVERLAY':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/segovia_outline.shp','OUTPUT':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/livestocks_routes_sg.shp'})
+  ```
+* Layer 6: river_courses
+  ```
+  processing.run("native:clip", {'INPUT':'C:\\Users\\nguye\\Downloads\\hy.hidro_cyl_masas\\hy.hidro_cyl_masas.shp','OVERLAY':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/segovia_outline.shp','OUTPUT':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/river_courses_sg.shp'})
+  ```
+
+## Layers significance
+1. Irrigable zones: to see irrigable areas in Segovia and how that relates to topillo distribution
+2. Critical species: to identify species that might need more consideration to prevent risk during solutions design. To identify rewilding project and significance of the outcome of the solution
+3. Livestock Nitrogen load index: to see how intensive the livestocks are in our area of interest
+4. Topillo distribution: to see how the voles are distributed
+5. Livestocks routes: to see the livestocks trails and know the limit of the allowed vegetation cover
+6. River courses: To locate critical regions that might need vegetation clearing and monitoring 
