@@ -35,6 +35,3 @@ This is a raster layer which is imported into QGIS by adding URL in WMS. But cli
   ```
   
   ```
-* Layer 5: Bioclimate
-  ```
-  ```
