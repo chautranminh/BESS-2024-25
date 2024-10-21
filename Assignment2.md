@@ -33,5 +33,5 @@ This is a raster layer which is imported into QGIS by adding URL in WMS. But cli
   ```
 * Layer 4: topillo_distribution
   ```
-  
+  processing.run("native:clip", {'INPUT':'delimitedtext://file:///C:/Users/nguye/OneDrive%20-%20IE%20University/Escritorio/IE/2ndYear/GIS/challenge_topillo/vole_distribution/0033613-240906103802322.csv?type=csv&delimiter=%5Ct&maxFields=10000&detectTypes=yes&xField=decimalLongitude&yField=decimalLatitude&crs=EPSG:4326&spatialIndex=no&subsetIndex=no&watchFile=no&field=gbifID:text','OVERLAY':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/segovia_outline.shp','OUTPUT':'C:/Users/nguye/OneDrive - IE University/Escritorio/IE/2ndYear/GIS/challenge_topillo/topillo_distribution_sg.shp'})
   ```
