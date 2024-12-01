@@ -1,23 +1,34 @@
-Normalized Difference Vegetation Index 
+# Layers input
+1. Distribution of land: parcelas (to look at the areas and perimeters of agricultural fields and assess the scale). 
+  [Source](https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLAYGDTSLCPAR2021)
+  * Important Categorises: TA - arable land, PA - pasture with trees, PR - shrubs, PS - pasture, FO - forest.
+  * Layer 1 name: SEGOVIA - 40_RCFE
+    * Layer type: Shapefile
+    * Scale: Segovia province
+2. Crop types: To specify the main crops in different parcels
+  [Source](https://mcsncyl.itacyl.es/es/descarga)
+  * Layer 1 name: croptype
+    * Layer type: GEOTiff
+    * Scale: Castilla y Leon (2023)
+  * Layer 2 name: Codificacion de la capa raster
+    * Layer type: CSV
+    * Scale: Castilla y Leon
+3. Livestock trails
+  [Source](https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLMNADTSAMVPE)
+  * Layer name: Livestock routes
 
+# Processing data
+1. Covert raster layer "croptype" into vector layer. Rename: "newcroptype"
+2. Join attributes (Land_crop) from the CSV file to Layer "newcroptype". Rename: "newcroptypepart2"
+3. Reproject layer "newcroptypepart2" from CRS 4326 to CRS 25830. Rename: "croptype_cyl"
+4. Join attributes
+5. Export data - Create graph
+6. Export map
 
-Irrigation zones: vegetative production 
-
+# Spatial analysis
 ## Scale assessment
-Distribution of land: parcelas (to look at the size of agricultural fields and where we can implement margins. 
-[Source](https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLAYGDTSLCPAR2021)
-* Categorised: TA: arable land, PA: pasture with trees, PR: shrubs, PS: pasture, FO: forest.
-  
+1. Hello
+2. Yellow
+## Visual deliverables
+
 ![image](https://github.com/user-attachments/assets/eea12b22-32f5-477d-aa05-5ceab4fb4b43)
-Deliverables: Gain data on the crops areas, perimeter, distribution of farmlands based on scale. 
-Numbers of alfalfa crops, crops with most areas, crops with furthest distance from shrubs (margins) and where?
-Modelling margins, 
-
-Livestocks routes: [source](https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLMNADTSAMVPE)
-
-Deliverables: 
-
-Include the rivers and we need to include vegetation cover for 20 m every 200 m, so it could be green dotted lines along the river
-
-
-detect trees and create a 10 m buffer around them
