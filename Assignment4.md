@@ -32,13 +32,17 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
 ```
 
 6. Join the farm sizes data from layer PALENCIA - 34_RCFE and SEGOVIA - 40_RCFE with the "palencia_crops" and "segovia_crops" in that order. 
-7. Export data - Create graph
+7. Export data - Create bar graph and pie chart
 8. Export map
 
 # Spatial analysis
 ## Scale assessment
-1. Hello
-2. Yellow
-## Visual deliverables
+- I haven't been able to carry out the spatial analysis yet because the geoprocessing has been processing for more than 4 hours :(
 
-![image](https://github.com/user-attachments/assets/eea12b22-32f5-477d-aa05-5ceab4fb4b43)
+## Visual deliverables
+- These are my goals for the deliverable:
+  - Percentage of small-scale, large-scale, medium-scale farm
+  - The percentage of different crop types in each farm scale type
+  - Percentage of farms that are of close distance to voles’ occurrences.
+ 
+The document will be updated as soon as possible!
