@@ -5,6 +5,7 @@
   * Layer 1 name: SEGOVIA - 40_RCFE
     * Layer type: Shapefile
     * Scale: Segovia province
+  * Layer 2 name: PALENCIA - 34_RCFE
 2. Crop types: To specify the main crops in different parcels
   [Source](https://mcsncyl.itacyl.es/es/descarga)
   * Layer 1 name: croptype
@@ -13,17 +14,26 @@
   * Layer 2 name: Codificacion de la capa raster
     * Layer type: CSV
     * Scale: Castilla y Leon
-3. Livestock trails
-  [Source](https://idecyl.jcyl.es/geonetwork/srv/spa/catalog.search#/metadata/SPAGOBCYLMNADTSAMVPE)
-  * Layer name: Livestock routes
+3. Castilla y Leon regions
+  [Source]()
 
 # Processing data
 1. Covert raster layer "croptype" into vector layer. Rename: "newcroptype"
 2. Join attributes (Land_crop) from the CSV file to Layer "newcroptype". Rename: "newcroptypepart2"
-3. Reproject layer "newcroptypepart2" from CRS 4326 to CRS 25830. Rename: "croptype_cyl"
-4. Join attributes
-5. Export data - Create graph
-6. Export map
+3. Change the projection of "newcroptypepart2" from CRS 4326 to CRS 25830. 
+4. Clip the layer "newcroptypepart2" by Palencia and Segovia Region, using the extent from features in "prov_cyl_recintos" layer. New layers' names: "palencia_crops" and "segovia_crops"
+```
+ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\newcroptypespart2.gpkg|layername=newcroptypespart2','OVERLAY':QgsProcessingFeatureSourceDefinition('C:/Users/localuser/Documents/GIS data/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos', selectedFeaturesOnly=True, featureLimit=-1, geometryCheck=QgsFeatureRequest.GeometryAbortOnInvalid),'OUTPUT':'C:/Users/localuser/Documents/GIS data/palencia_crops.gpkg'})
+
+```
+
+```
+processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\newcroptypespart2.gpkg|layername=newcroptypespart2','OVERLAY':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OUTPUT':'C:/Users/localuser/Documents/GIS data/segovia_crops.gpkg'})
+```
+
+6. Join 
+7. Export data - Create graph
+8. Export map
 
 # Spatial analysis
 ## Scale assessment
