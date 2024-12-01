@@ -19,7 +19,7 @@
 
 # Processing data
 1. Covert raster layer "croptype" into vector layer. Rename: "newcroptype"
-2. Join attributes (Land_crop) from the CSV file to Layer "newcroptype". Rename: "newcroptypepart2"
+2. Join attributes (Land_crop) from the CSV file to Layer "newcroptype". Rename: "newcroptypepart2" (After finishing i realised i could have created a CSV file in excel with pivot table and use spatial join)
 3. Change the projection of "newcroptypepart2" from CRS 4326 to CRS 25830. 
 4. Clip the layer "newcroptypepart2" by Palencia and Segovia Region, using the extent from features in "prov_cyl_recintos" layer. New layers' names: "palencia_crops" and "segovia_crops"
 ```
@@ -31,7 +31,7 @@
 processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\newcroptypespart2.gpkg|layername=newcroptypespart2','OVERLAY':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OUTPUT':'C:/Users/localuser/Documents/GIS data/segovia_crops.gpkg'})
 ```
 
-6. Join 
+6. Join the farm sizes data from layer PALENCIA - 34_RCFE and SEGOVIA - 40_RCFE with the "palencia_crops" and "segovia_crops" in that order. 
 7. Export data - Create graph
 8. Export map
 
