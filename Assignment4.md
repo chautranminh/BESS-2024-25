@@ -31,13 +31,22 @@
 processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\newcroptypespart2.gpkg|layername=newcroptypespart2','OVERLAY':'C:/Users/localuser/Documents/GIS data/sg_province.gpkg|layername=prov_cyl_recintos','OUTPUT':'C:/Users/localuser/Documents/GIS data/segovia_crops.gpkg'})
 ```
 
-6. Join the farm sizes data from layer PALENCIA - 34_RCFE and SEGOVIA - 40_RCFE with the "palencia_crops" and "segovia_crops" in that order. 
-7. Export data - Create bar graph and pie chart
-8. Export map
+6. Join the farm sizes data from layer PALENCIA - 34_RCFE and SEGOVIA - 40_RCFE with the "palencia_crops" and "segovia_crops" in that order. New layers name: "palencia_cropsdata" and "segovia_cropsdata"
+7. Export the 2 layers just created to CSV file and upload into excel. Perform data cleaning in Excel
+   * In brief: there are 98221 parcels in Palencia.
+   * Create Pivot table
+8. Create bar graph and pie chart
+    Graph 1:
+   ![KdfAi-land-cover-in-palencia-by-perimeter-and-area](https://github.com/user-attachments/assets/d78b14fb-755b-408e-a05c-7e85c38d695a)
+    Graph 2:
+   ![KdfAi-land-cover-in-palencia-by-perimeter-and-area (1)](https://github.com/user-attachments/assets/7c2d3f6b-b294-479b-83f0-0c43c454cc2b)
+    Graph 3:
+   
+10. Export map
 
 # Spatial analysis
 ## Scale assessment
-- I haven't been able to carry out the spatial analysis yet because the geoprocessing has been processing for more than 4 hours :(
+
 
 ## Visual deliverables
 - These are my goals for the deliverable:
