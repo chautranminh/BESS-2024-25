@@ -39,7 +39,7 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
     Graph 1:
    ![KdfAi-land-cover-in-palencia-by-perimeter-and-area](https://github.com/user-attachments/assets/d78b14fb-755b-408e-a05c-7e85c38d695a)
     Graph 2:
-   ![KdfAi-land-cover-in-palencia-by-perimeter-and-area (1)](https://github.com/user-attachments/assets/7c2d3f6b-b294-479b-83f0-0c43c454cc2b)
+   ![KdfAi-land-cover-in-palencia-by-perimeter-and-area (2)](https://github.com/user-attachments/assets/bfd3e4fd-53d1-4041-b325-30775ca1edd0)
     Graph 3:
    
 10. Export map
