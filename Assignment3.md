@@ -41,7 +41,8 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
     Graph 2:
    ![KdfAi-land-cover-in-palencia-by-perimeter-and-area (2)](https://github.com/user-attachments/assets/bfd3e4fd-53d1-4041-b325-30775ca1edd0)
     Graph 3:
-   
+   ![NlDng-scale-of-parcels-in-palencia-agriculture-farms](https://github.com/user-attachments/assets/7da86961-f685-4d29-9b53-26f6f830987d)
+
 10. Export map
 
 # Spatial analysis
