@@ -45,14 +45,14 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
 
 10. Export map
 
+![MapAssignment3](https://github.com/user-attachments/assets/962f87d1-0d53-4125-bd9d-48691c360128)
+
+
 # Spatial analysis
 ## Scale assessment
 
-
-## Visual deliverables
 - These are my goals for the deliverable:
   - Percentage of small-scale, large-scale, medium-scale farm
   - The percentage of different crop types in each farm scale type
   - Percentage of farms that are of close distance to voles’ occurrences.
  
-The document will be updated as soon as possible!
