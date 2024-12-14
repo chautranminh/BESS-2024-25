@@ -16,6 +16,10 @@
     * Scale: Castilla y Leon
 3. Castilla y Leon regions
   [Source]()
+4. Livestocks route in Castilla y Leon
+  * Layer name: Livestock_routes
+  * Layer type: Geopackage
+  * Scale: Castilla y Leon
 
 # Processing data
 1. Covert raster layer "croptype" into vector layer. Rename: "newcroptype"
@@ -24,7 +28,6 @@
 4. Clip the layer "newcroptypepart2" by Palencia and Segovia Region, using the extent from features in "prov_cyl_recintos" layer. New layers' names: "palencia_crops" and "segovia_crops"
 ```
  processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\newcroptypespart2.gpkg|layername=newcroptypespart2','OVERLAY':QgsProcessingFeatureSourceDefinition('C:/Users/localuser/Documents/GIS data/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos', selectedFeaturesOnly=True, featureLimit=-1, geometryCheck=QgsFeatureRequest.GeometryAbortOnInvalid),'OUTPUT':'C:/Users/localuser/Documents/GIS data/palencia_crops.gpkg'})
-
 ```
 
 ```
@@ -32,12 +35,18 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
 ```
 
 6. Join the farm sizes data from layer PALENCIA - 34_RCFE and SEGOVIA - 40_RCFE with the "palencia_crops" and "segovia_crops" in that order. New layers name: "palencia_cropsdata" and "segovia_cropsdata"
-7. Export the 2 layers just created to CSV file and upload into excel. Perform general data cleaning in Excel, so that the table now has 4 columns: Parcel, Land_cover, Perimeter, Surface_area. 
-   * In brief: there are 98221 parcels in Palencia.
-8. Create bar graph and pie chart
-9. Export map
+7. Clip the "Livestock_routes" layer to Palencia region. New layer name: "LivestockRoute_Palencia"
+```
+ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\livestock_routes.gpkg|layername=livestocks_routes','OVERLAY':QgsProcessingFeatureSourceDefinition('C:/Users/localuser/Documents/GIS data/prov_cyl_recintos.gpkg|layername=prov_cyl_recintos', selectedFeaturesOnly=True, featureLimit=-1, geometryCheck=QgsFeatureRequest.GeometryAbortOnInvalid),'OUTPUT':'ogr:dbname=\'C:/Users/localuser/Documents/GIS data/livestock_routes_palencia.gpkg\' table="LivestockRoute_Palencia" (geom)'})
+```
 
-![MapAssignment3](https://github.com/user-attachments/assets/962f87d1-0d53-4125-bd9d-48691c360128)
+8. Export the 2 layers just created to CSV file and upload into excel. Perform general data cleaning in Excel, so that the table now has 4 columns: Parcel, Land_cover, Perimeter, Surface_area. 
+   * In brief: there are 98221 parcels in Palencia.
+9. Create bar graph and pie chart
+10. Export map
+
+![MapAssignment3ver2](https://github.com/user-attachments/assets/c23c8924-debd-4850-a6f9-5bbe1efae50d)
+
 
 
 # Spatial analysis
@@ -78,5 +87,4 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
 * The graphs give an overview of the share of different vegetations in the Palencia topography. It is to our surprise that the share of alfalfa and rapeseed crops are very low, but monoculture crops such as wheat and barley sunflower is relatively significant. Considering that Palencia is the city with the most significant damage from vole pest, we suggest that perhaps it is not because of the large surface area of the afalfa or rapeseed crops, but the fact that many crops, including but not limited to afalfa and rapeseeds, are grown in the monoculture practice, with low frequencies of natural predators among the area. What is also worth noticing is the low share of pasture fields, though we are not sure about the landscape of these pastures. This can be a challenge if we want to, in the long run, introduce traditional grazing practises such as transhumance or pastoralism.  
 
 # Question 
-We found this [article online](https://scijournals.onlinelibrary.wiley.com/doi/full/10.1002/ps.8344)
-it does not seem like it can be georeferenced.
+We found this [article online](https://scijournals.onlinelibrary.wiley.com/doi/full/10.1002/ps.8344) and it does not seem like it can be georeferenced just by adding points like we did in class but it needs to have buffer zone. But i'm not sure how to locate the center especially when there are so many zones overlapping each other, is there any precise way to do it or do i just estimate the center and create the buffer zone accordingly?
