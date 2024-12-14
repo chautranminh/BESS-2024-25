@@ -59,7 +59,7 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
 
 ![image](https://github.com/user-attachments/assets/0beafc3f-9d93-478c-84a1-d43cc30eb8d8)
 ### Relevance to the challenge
-* 
+* By creating diagrams showing the scale of farm fields in Palencia, we obtain an overview of the farm scale in Palencia, from there, we can tailor our solution to such scales. In the box plot in Graph 3, there seems to be an outlier in our data or miscalculation in the data processing, which needs to be reexamined. 
 
 
 ## 2. Land cover
@@ -75,7 +75,7 @@ processing.run("native:clip", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS dat
     
    ![KdfAi-land-cover-in-palencia-by-perimeter-and-area (2)](https://github.com/user-attachments/assets/bfd3e4fd-53d1-4041-b325-30775ca1edd0)
 ### Relevance to the challenge
-* 
+* The graphs give an overview of the share of different vegetations in the Palencia topography. It is to our surprise that the share of alfalfa and rapeseed crops are very low, but monoculture crops such as wheat and barley sunflower is relatively significant. What is also worth noticing is the low share of pasture fields, though we are not sure about the landscape of these pastures. This can be a challenge if we want to, in the long run, introduce traditional grazing practises such as transhumance or pastoralism.  
 
 # Question 
 We found this [article online](https://scijournals.onlinelibrary.wiley.com/doi/full/10.1002/ps.8344)
