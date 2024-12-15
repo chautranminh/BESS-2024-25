@@ -24,3 +24,6 @@ Spatial join
 
 ### Step 6: Export Data
 
+### Step 7: Process data in Excel
+* Perform data cleaning
+* 
