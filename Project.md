@@ -14,6 +14,12 @@
 ```
  processing.run("native:joinattributesbylocation", {'INPUT':'C:\\Users\\localuser\\Documents\\GIS data\\VillalarDLC_croptypes.gpkg|layername=VDLC_croptypes','PREDICATE':[0],'JOIN':'/vsizip/C:\\Users\\localuser\\Documents\\GIS data\\47211_Villalar-de-los-Comuneros.zip/47211_RECFE.shp|layername=47211_RECFE','JOIN_FIELDS':['SUPERFICIE','PERIMETRO','PARCELA','USO_SIGPAC','Shape_Leng','Shape_Area'],'METHOD':0,'DISCARD_NONMATCHING':False,'PREFIX':'','OUTPUT':'ogr:dbname=\'C:/Users/localuser/Documents/GIS data/VDLC_Parcels_info.gpkg\' table="VLDC_Parcels_info2" (geom)'})
 ```
+
+Spatial join
+```
+
+ processing.run("native:joinattributesbylocation", {'INPUT':'C:/Users/localuser/Documents/GIS data/VillalarDLC_croptypes.gpkg|layername=VDLC_croptypes','PREDICATE':[0],'JOIN':'/vsizip/C:/Users/localuser/Documents/GIS data/47211_Villalar-de-los-Comuneros.zip/47211_RECFE.shp|layername=47211_RECFE','JOIN_FIELDS':['SUPERFICIE','PERIMETRO','PARCELA','USO_SIGPAC'],'METHOD':0,'DISCARD_NONMATCHING':False,'PREFIX':'','OUTPUT':'ogr:dbname=\'C:/Users/localuser/Documents/GIS data/VDLC_ParcelsInfo1.gpkg\' table="ParcelsInfoVLDC" (geom)'})
+```
 ### Step 4: Categorise data
 
 ### Step 6: Export Data
